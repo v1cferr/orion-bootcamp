@@ -13,6 +13,7 @@ body {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
 	height: 100vh;
 	justify-content: center;
 	text-align: center;
@@ -22,8 +23,12 @@ body {
 	text-align: center;
 }
 
+.aviso {
+	color: #ff3f3f;
+	font-size: 0.75rem;
+}
+
 .readonly {
-	margin-top: 1rem;
 	outline: none;
 	resize: none;
 }
