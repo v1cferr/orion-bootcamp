@@ -13,7 +13,6 @@
 let palavraEscolhida: string = "antedeguemon";
 
 function quantidadeEListaDeVogais(palavra: string): {quantidade: number; vogais: string } {
-    if (/^[a-zA-Z]+$/.test(palavra)) {
         let quantidade = 0;
         let vogais = "";
     
@@ -30,10 +29,7 @@ function quantidadeEListaDeVogais(palavra: string): {quantidade: number; vogais:
             }
         }
         return { quantidade, vogais };
-    } else {
-        return { quantidade: 0, vogais: "Valor informado inválido. Apenas palavras, por gentileza!" };
-    }
-}
+};
 
 const resultado = quantidadeEListaDeVogais(palavraEscolhida);
 console.log(`A palavra "${palavraEscolhida}" tem ${resultado.quantidade} vogais. Sendo elas, respectivamente: "${resultado.vogais}".`);

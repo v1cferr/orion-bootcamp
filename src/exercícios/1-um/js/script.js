@@ -11,25 +11,21 @@
 // let palavraEscolhida: string = "testeComOutraPalavraBarraFrase";
 let palavraEscolhida = "antedeguemon";
 function quantidadeEListaDeVogais(palavra) {
-    if (/^[a-zA-Z]+$/.test(palavra)) {
-        let quantidade = 0;
-        let vogais = "";
-        for (let i = 0; i < palavra.length; i++) {
-            if (palavra[i] == "a" ||
-                palavra[i] == "e" ||
-                palavra[i] == "i" ||
-                palavra[i] == "o" ||
-                palavra[i] == "u") {
-                vogais += palavra[i];
-                quantidade++;
-            }
+    let quantidade = 0;
+    let vogais = "";
+    for (let i = 0; i < palavra.length; i++) {
+        if (palavra[i] == "a" ||
+            palavra[i] == "e" ||
+            palavra[i] == "i" ||
+            palavra[i] == "o" ||
+            palavra[i] == "u") {
+            vogais += palavra[i];
+            quantidade++;
         }
-        return { quantidade, vogais };
     }
-    else {
-        return { quantidade: 0, vogais: "Valor informado inválido. Apenas palavras, por gentileza!" };
-    }
+    return { quantidade, vogais };
 }
+;
 const resultado = quantidadeEListaDeVogais(palavraEscolhida);
 console.log(`A palavra "${palavraEscolhida}" tem ${resultado.quantidade} vogais. Sendo elas, respectivamente: "${resultado.vogais}".`);
 // Exercício 1 - b)
