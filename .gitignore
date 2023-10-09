@@ -1,0 +1,6 @@
+.vscode
+.prettierrc
+*.json
+*.png
+*.jpg
+*.jpeg
