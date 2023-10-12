@@ -63,6 +63,41 @@ console.log(`Retorno do Nome via Paradigma Imperativo:
 	${retornarNomePeloIdImperativo(3)}`);
 // ************************************************************ //
 // c) Crie uma função que apague um item da lista a partir de um id passado.
+// c1) Paradigma Funcional
+function apagarPessoaPeloIdFuncional(id) {
+    const pessoa = lista.find((pessoa) => pessoa.id === id);
+    if (pessoa) {
+        const tamanhoDoArrayAntes = lista.length;
+        lista.splice(lista.indexOf(pessoa), 1);
+        const tamanhoDoArrayDepois = lista.length;
+        if (tamanhoDoArrayAntes > tamanhoDoArrayDepois) {
+            console.log(`(Paradigma Funcional) Pessoa com ID ${id} foi deletada do array: `, lista);
+        }
+        else {
+            console.log(`(Paradigma Funcional) Pessoa com ID ${id} não foi encontrada no array: `, lista);
+        }
+    }
+}
+apagarPessoaPeloIdFuncional(2);
+// c2) Paradigma Imperativo
+function apagarPessoaPeloIdImperativo(id) {
+    let encontrado = false;
+    for (const pessoa of lista) {
+        if (pessoa.id === id) {
+            for (let i = 0; i < lista.length; i++) {
+                if (lista[i].id === id) {
+                    lista.splice(i, 1);
+                    console.log(`(Paradigma Imperativo) Pessoa com ID ${id} foi deletada do array: `, lista);
+                    encontrado = true;
+                }
+            }
+        }
+    }
+    if (!encontrado) {
+        console.log(`(Paradigma Imperativo) Pessoa com ID ${id} não foi encontrada no array: `, lista);
+    }
+}
+apagarPessoaPeloIdImperativo(4);
 // ************************************************************ //
 // d) Crie uma função que altere a bio ou o name a partir de um id passado.
 // ************************************************************ //
