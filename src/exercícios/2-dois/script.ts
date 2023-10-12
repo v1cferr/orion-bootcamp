@@ -56,6 +56,27 @@ console.log(`Retorno da Bio via Paradigma Imperativo:
 // ************************************************************ //
 
 // b) Crie uma função que retorne o name do id passado.
+// b1) Paradigma Funcional
+function retornarNomePeloIdFuncional(id: number): string | undefined {
+	const pessoa: Pessoa | undefined = lista.find((pessoa) => pessoa.id === id);
+	return pessoa ? pessoa.name : undefined;
+}
+
+console.log(`Retorno do Nome via Paradigma Funcional:
+	${retornarNomePeloIdFuncional(3)}`);
+
+// b2) Paradigma Imperativo
+function retornarNomePeloIdImperativo(id: number): string | undefined {
+	for (const pessoa of lista) {
+		if (pessoa.id === id) {
+			return pessoa.name;
+		}
+	}
+	return undefined;
+}
+
+console.log(`Retorno do Nome via Paradigma Imperativo:
+	${retornarNomePeloIdImperativo(3)}`);
 
 // ************************************************************ //
 
