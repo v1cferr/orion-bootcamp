@@ -1,0 +1,5 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"include": ["*.ts", "*.js", "*.tsx", "*.jsx", "*.json", "*.html"]
+}
