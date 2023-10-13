@@ -91,12 +91,12 @@ function apagarPessoaPeloIdFuncional(id: number): void {
 
 		if (tamanhoDoArrayAntes > tamanhoDoArrayDepois) {
 			console.log(
-				`(Paradigma Funcional) Pessoa com ID ${id} foi deletada do array: `,
+				`(Paradigma Funcional) Pessoa com ID ${id} foi deletada do array:`,
 				lista
 			);
 		} else {
 			console.log(
-				`(Paradigma Funcional) Pessoa com ID ${id} não foi encontrada no array: `,
+				`(Paradigma Funcional) Pessoa com ID ${id} não foi encontrada no array:`,
 				lista
 			);
 		}
@@ -114,7 +114,7 @@ function apagarPessoaPeloIdImperativo(id: number): void {
 				if (lista[i].id === id) {
 					lista.splice(i, 1);
 					console.log(
-						`(Paradigma Imperativo) Pessoa com ID ${id} foi deletada do array: `,
+						`(Paradigma Imperativo) Pessoa com ID ${id} foi deletada do array:`,
 						lista
 					);
 					encontrado = true;
@@ -125,7 +125,7 @@ function apagarPessoaPeloIdImperativo(id: number): void {
 
 	if (!encontrado) {
 		console.log(
-			`(Paradigma Imperativo) Pessoa com ID ${id} não foi encontrada no array: `,
+			`(Paradigma Imperativo) Pessoa com ID ${id} não foi encontrada no array:`,
 			lista
 		);
 	}
@@ -136,7 +136,75 @@ apagarPessoaPeloIdImperativo(4);
 // ************************************************************ //
 
 // d) Crie uma função que altere a bio ou o name a partir de um id passado.
+// d1) Paradigma Funcional
+function alterarBioOuNomeAPartirDoIdFuncional(
+	id: number,
+	novaBio: string | undefined,
+	novoNome: string | undefined
+): { bio: string; name: string } | undefined {
+	const pessoa: Pessoa | undefined = lista.find((pessoa) => pessoa.id === id);
+
+	if (pessoa) {
+		if (novaBio !== undefined) {
+			pessoa.bio = novaBio;
+		}
+
+		if (novoNome !== undefined) {
+			pessoa.name = novoNome;
+		}
+	}
+	return { bio: pessoa?.bio || "", name: pessoa?.name || "" };
+}
+
+const alteraçãoFuncional = alterarBioOuNomeAPartirDoIdFuncional(
+	1,
+	"Alteração do Nome via Paradigma Funcional",
+	"Alteração da Bio via Paradigma Funcional"
+);
+console.log(
+	"Retorno da Alteração via Paradigma Funcional:",
+	alteraçãoFuncional,
+	lista
+);
+
+// d2) Paradigma Imperativo
+function alterarBioOuNomeAPartirDoIdImperativo(
+	id: number,
+	novaBio: string | undefined,
+	novoNome: string | undefined
+): { bio: string; name: string } | undefined {
+	let pessoa: Pessoa | undefined;
+	for (let i = 0; i < lista.length; i++) {
+		if (lista[i].id === id) {
+			pessoa = lista[i];
+			if (novaBio !== undefined) {
+				pessoa.bio = novaBio;
+			}
+
+			if (novoNome !== undefined) {
+				pessoa.name = novoNome;
+			}
+		}
+	}
+	return { bio: pessoa?.bio || "", name: pessoa?.name || "" };
+}
+
+const alteraçãoImperativo = alterarBioOuNomeAPartirDoIdImperativo(
+	3,
+	"Alteração do Nome via Paradigma Imperativo",
+	"Alteração da Bio via Paradigma Imperativo"
+);
+console.log(
+	"Retorno da Alteração via Paradigma Imperativo:",
+	alteraçãoImperativo,
+	lista
+);
 
 // ************************************************************ //
 
 // e) Demonstre todas as funções com o paradigma funcional e com o imperativo.
+/*
+ * ^^ Demonstrado nas questões anteriores ^^
+ * (Funcional e Imperativo, respectivamente:
+ * a1/a2, b1/b2, c1/c2, d1/d2)
+ */
