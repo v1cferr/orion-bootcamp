@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Exercícios (1-3) | Orion Bootcamp</title>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./src/exercícios/1-um/css/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./src/exercícios/2-dois/css/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./src/exercícios/3-três/css/style.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>Exercícios (1-3) | Orion Bootcamp</h1>
+		</header>
+		<main>
+			<section class="ex1__container">
+				<h2 class="ex1__title">Contador de Vogais</h2>
+
+				<div class="ex1__container-input">
+					<input id="ex1__input" type="text" placeholder="Digite uma palavra" />
+					<button id="ex1__button">Contar</button>
+				</div>
+
+				<textarea
+					name="ex1__textarea"
+					id="ex1__textarea"
+					class="ex1__textarea"
+					cols="55"
+					rows="5"
+					placeholder="Quantidade de vogais"
+					readonly
+				></textarea>
+			</section>
+
+			<section class="ex2__container">
+				<table id="ex2__table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+							<th>Biografia</th>
+						</tr>
+					</thead>
+					<tbody id="ex2__tbody"></tbody>
+				</table>
+
+				<div class="ex2__container-bio">
+					<h2 class="ex2__title-bio">Retornar Biografia</h2>
+
+					<form class="ex2__form-bio">
+						<input id="ex2__input-bio" type="text" placeholder="ID" required />
+						<button id="ex2__button-bio" type="button">Consultar</button>
+					</form>
+
+					<textarea
+						name="ex2__textarea-bio"
+						id="ex2__textarea-bio"
+						class="ex2__textarea-bio"
+						cols="55"
+						rows="5"
+						placeholder="Biografia"
+						readonly
+					></textarea>
+				</div>
+			</section>
+		</main>
+		<script src="./src/exercícios/1-um/js/script.js"></script>
+		<!-- <script src="./src/exercícios/2-dois/js/script.js"></script> -->
+		<script src="./src/exercícios/3-três/js/script.js"></script>
+	</body>
+</html>
