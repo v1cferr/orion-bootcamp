@@ -41,9 +41,11 @@ console.log(
 
 // Exercício 1 - b)
 
-const input = document.getElementById("input") as HTMLInputElement;
-const button = document.getElementById("button") as HTMLButtonElement;
-const readonly = document.getElementById("readonly") as HTMLTextAreaElement;
+const input = document.getElementById("ex1__input") as HTMLInputElement;
+const button = document.getElementById("ex1__button") as HTMLButtonElement;
+const readonly = document.getElementById(
+	"ex1__textarea"
+) as HTMLTextAreaElement;
 
 button.addEventListener("click", () => {
 	const palavraDigitada = input.value;
