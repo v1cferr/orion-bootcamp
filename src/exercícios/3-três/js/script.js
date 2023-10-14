@@ -56,3 +56,67 @@ buttonBiografia.addEventListener("click", () => {
     }
 });
 // ************************************************************ //
+function retornarNome(id) {
+    const pessoa = listaDePessoas.find((pessoa) => pessoa.id === id);
+    return pessoa ? pessoa.name : undefined;
+}
+const inputIdNome = document.getElementById("ex2__input-name");
+const buttonNome = document.getElementById("ex2__button-name");
+const textareaNome = document.getElementById("ex2__textarea-name");
+buttonNome.addEventListener("click", () => {
+    const id = Number(inputIdNome.value);
+    const name = retornarNome(id);
+    if (name) {
+        textareaNome.value = name;
+    }
+    else {
+        textareaNome.value = `Pessoa com o ID ${id} não encontrada.`;
+    }
+});
+// ************************************************************ //
+function apagarPessoa(id) {
+    const pessoa = listaDePessoas.find((pessoa) => pessoa.id === id);
+    if (pessoa) {
+        listaDePessoas.splice(listaDePessoas.indexOf(pessoa), 1);
+        alert(`Pessoa com ID ${id} apagada com sucesso!`);
+    }
+}
+const inputIdDeletar = document.getElementById("ex2__input-delete");
+const buttonDeletar = document.getElementById("ex2__button-delete");
+buttonDeletar.addEventListener("click", () => {
+    const id = Number(inputIdDeletar.value);
+    apagarPessoa(id);
+    atualizarTabela();
+});
+// ************************************************************ //
+function alterarBioOuNome(id, name, bio) {
+    const pessoa = listaDePessoas.find((pessoa) => pessoa.id === id);
+    if (pessoa) {
+        if (name) {
+            pessoa.name = name;
+        }
+        else {
+            alert("O nome não pode estar em branco.");
+        }
+        if (bio) {
+            pessoa.bio = bio;
+        }
+        else {
+            alert("A biografia não pode estar em branco.");
+        }
+    }
+    else {
+        alert(`Pessoa com o ID ${id} não encontrada.`);
+    }
+    atualizarTabela();
+}
+const inputIdAlterar = document.getElementById("ex2__input-alterar-id");
+const inputNameAlterar = document.getElementById("ex2__input-alterar-name");
+const inputBioAlterar = document.getElementById("ex2__input-alterar-bio");
+const buttonAlterar = document.getElementById("ex2__button-alterar");
+buttonAlterar.addEventListener("click", () => {
+    const id = Number(inputIdAlterar.value);
+    const name = inputNameAlterar.value;
+    const bio = inputBioAlterar.value;
+    alterarBioOuNome(id, name, bio);
+});

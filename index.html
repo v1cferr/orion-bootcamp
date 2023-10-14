@@ -74,12 +74,71 @@
 					<textarea
 						name="ex2__textarea-bio"
 						id="ex2__textarea-bio"
-						class="ex2__textarea-bio"
+						class="ex2__textarea"
 						cols="55"
 						rows="5"
 						placeholder="Biografia"
 						readonly
 					></textarea>
+				</div>
+
+				<div class="ex2__container-name">
+					<h2 class="ex2__title-name">Retornar Nome</h2>
+
+					<form class="ex2__form-name">
+						<input id="ex2__input-name" type="text" placeholder="ID" required />
+						<button id="ex2__button-name" type="button">Consultar</button>
+					</form>
+
+					<textarea
+						name="ex2__textarea-name"
+						id="ex2__textarea-name"
+						class="ex2__textarea"
+						cols="55"
+						rows="5"
+						placeholder="Nome"
+						readonly
+					></textarea>
+				</div>
+
+				<div class="ex2__container-delete">
+					<h2 class="ex2__title-delete">Deletar Pessoa</h2>
+
+					<form class="ex2__form-delete">
+						<input
+							id="ex2__input-delete"
+							type="text"
+							placeholder="ID"
+							required
+						/>
+						<button id="ex2__button-delete" type="button">Deletar</button>
+					</form>
+				</div>
+
+				<div class="ex2__container-alterar">
+					<h2 class="ex2__title-alterar">Alterar Bio/Nome</h2>
+
+					<form class="ex2__form-alterar">
+						<input
+							id="ex2__input-alterar-id"
+							type="text"
+							placeholder="ID"
+							required
+						/>
+						<input
+							id="ex2__input-alterar-name"
+							type="text"
+							placeholder="Nome"
+							required
+						/>
+						<input
+							id="ex2__input-alterar-bio"
+							type="text"
+							placeholder="Biografia"
+							required
+						/>
+						<button id="ex2__button-alterar" type="button">Alterar</button>
+					</form>
 				</div>
 			</section>
 		</main>
