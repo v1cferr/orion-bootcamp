@@ -1,0 +1,14 @@
+.ex2__container {
+	border: 1px solid #ccc;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	margin-top: 1rem;
+	padding: 0.5rem;
+}
+
+.ex2__textarea {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	outline: none;
+	resize: none;
+}

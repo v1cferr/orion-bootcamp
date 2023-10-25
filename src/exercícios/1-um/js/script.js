@@ -32,9 +32,9 @@ console.log(
 	`A palavra "${palavraEscolhida}" tem ${resultado.quantidade} vogais. Sendo elas, respectivamente: "${resultado.vogais}".`
 );
 // Exercício 1 - b)
-const input = document.getElementById("input");
-const button = document.getElementById("button");
-const readonly = document.getElementById("readonly");
+const input = document.getElementById("ex1__input");
+const button = document.getElementById("ex1__button");
+const readonly = document.getElementById("ex1__textarea");
 button.addEventListener("click", () => {
 	const palavraDigitada = input.value;
 	const resultado = quantidadeEListaDeVogais(palavraDigitada);

@@ -1,0 +1,23 @@
+@import url("./src/exercícios/1-um/css/style.css");
+@import url("./src/exercícios/2-dois/css/style.css");
+@import url("./src/exercícios/3-três/css/style.css");
+
+html {
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: #f2f2f2;
+	color: #333;
+	/* font-weight: 400;
+	font-size: 16px;
+	line-height: 0.95;
+	margin: 0;
+	padding: 0; */
+}
+
+header {
+	background-color: #eeeeee;
+	border-bottom: 1px solid #ccc;
+	padding: 0.25rem;
+}
